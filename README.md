@@ -49,6 +49,9 @@ In order to run / test the program navigate to Driver class and change the value
 Please do not remove files folder which initialized with 1 txt file (Off course you can add more)
 
 ## Part 2 - Classes
+UML diagram for this part-</br>
+![UML](https://user-images.githubusercontent.com/84707578/212321939-82f13bee-7c5e-441a-ba28-9e23db0ae26c.jpeg)
+
 
 Task class:</br>
 recieve a callable object and is prioriy number and cast the a Task cllas.
