@@ -48,3 +48,17 @@ In order to run / test the program navigate to Driver class and change the value
 
 Please do not remove files folder which initialized with 1 txt file (Off course you can add more)
 
+## Part 2 - 
+
+Task class:</br>
+recieve a callable object and is prioriy number and cast the a Task cllas.
+the class can create more instance with the createtask method.
+Ft class
+addapter for make a object of the form of task to a form of runnable that can be applied inside the threadpool.
+its contain also the compar func for decide the priority of each object in the pool.
+
+customerexecutur class: </br>
+
+contain a threadpool that have all the task casted to runnable and take the according to the max priority in the queue.
+submit - take a task execute it and add the task to the priority queue.
+max - iterate over all the queue and return the max value of priority,this func get a call when we add/remove a task from the queue.
