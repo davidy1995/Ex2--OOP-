@@ -7,6 +7,7 @@ public class Tests {
     public static final Logger logger = LoggerFactory.getLogger(Tests.class);
     @Test
     public void partialTest() throws ExecutionException, InterruptedException, TimeoutException {
+        {
         CustomExecutor customExecutor = new CustomExecutor();
         var task = Task.createTask(()->{
             int sum = 0;
@@ -62,11 +63,11 @@ public class Tests {
         logger.info(()->String.valueOf("Total Price = " + totalPrice));
         logger.info(()-> "Current maximum priority = " +
                 customExecutor.getCurrentMax());
-        int size = customExecutor.getQueue().size();
+
         customExecutor.gracefullyTerminate();
 
-        //Test to see that task cant be added to the queue after gracefullyTerminate
-        Assertions.assertEquals(size,customExecutor.getQueue().size());
+        //Test to see that task cant be added to the queue after gracefullyTerminate and that all the queue are over
+        Assertions.assertEquals(0,customExecutor.getQueue().size());
         Assertions.assertThrows(RejectedExecutionException.class,()->customExecutor.submit(task));
     }
 }
