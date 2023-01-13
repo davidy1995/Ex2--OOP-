@@ -12,7 +12,7 @@ number of lines in these files. We  useed three methods - without using threads,
 Lets have a look on the UML diagram we've created for this project.
 ![UML](https://user-images.githubusercontent.com/84707578/212106322-7317748b-01c3-45cc-bc03-3485956bcb75.png)
 
- Performance Tests:
+ ## Part I - Performance Tests:
  
  We will compare 3 scenarios with different amount of txt files we've created.
 
@@ -37,3 +37,14 @@ There could be several reasons why using threads was the fastest implementation:
 * The number of tasks you were performing was not large enough to justify the use of a thread pool. In cases where there are only a few tasks, using a    thread pool can actually add unnecessary overhead and slow down performance. 
 * The tasks you were performing were not computationally intensive enough to take advantage of the parallelism provided by multiple threads.
 * Thread pool have additional overhead on the management of the thread and the queue, this could be a reason for the slow performance.
+
+
+ ## Part I - How To Use:
+In order to run / test the program navigate to Driver class and change the N
+
+```bash
+ String[] files = Ex2_1.createTextFiles(CHANGE THIS, 1, 10000);
+```
+
+
+
