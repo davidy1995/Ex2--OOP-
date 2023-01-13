@@ -95,6 +95,20 @@ public class Ex2_1 {
         return lines;
     }
 
+    /**
+     * Creates thread pool.
+     *
+     * @param numberOfThreads number of threads in the pool
+     * @return executor service
+     * */
+    private static ExecutorService getThreadPool(int numberOfThreads) {
+        final int DEFAULT_POOL_SIZE = 1000;
+        try {
+            return Executors.newFixedThreadPool(numberOfThreads);
+        } catch (Error | Exception e) {
+            return Executors.newFixedThreadPool(DEFAULT_POOL_SIZE);
+        }
+    }
 
     /**
      * Gets number of line in files using thread pool.
@@ -106,7 +120,7 @@ public class Ex2_1 {
         int lines = 0;
         try {
             //Create thread pool with the size equal to the size of number of files.
-            ExecutorService executor = Executors.newFixedThreadPool(fileNames.length);
+            ExecutorService executor = getThreadPool(fileNames.length);
             // Loop through the files array.
             for (String fileName : fileNames) {
                 //Create callable class object and submit to thread pool
