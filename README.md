@@ -12,7 +12,9 @@ number of lines in these files. We  useed three methods - without using threads,
 Lets have a look on the UML diagram we've created for this project.
 ![UML](https://user-images.githubusercontent.com/84707578/212106322-7317748b-01c3-45cc-bc03-3485956bcb75.png)
 
- Tests
+ Performance Tests:
+ 
+ We will compare 3 scenarios with different amount of txt files we've created.
 
 n = 3000, seed = 15 , bound = 10000 </br>
 ![test](https://user-images.githubusercontent.com/84707578/212276693-eff00907-a83c-4dcd-a861-8e0ca038459b.png)</br>
