@@ -48,7 +48,7 @@ In order to run / test the program navigate to Driver class and change the value
 
 Please do not remove files folder which initialized with 1 txt file (Off course you can add more)
 
-## Part 2 - 
+## Part 2 - Classes
 
 Task class:</br>
 recieve a callable object and is prioriy number and cast the a Task cllas.
@@ -57,8 +57,13 @@ Ft class
 addapter for make a object of the form of task to a form of runnable that can be applied inside the threadpool.
 its contain also the compar func for decide the priority of each object in the pool.
 
-customerexecutur class: </br>
+Customerexecutur class:</br>
 
 contain a threadpool that have all the task casted to runnable and take the according to the max priority in the queue.
+the functions of the class
 submit - take a task execute it and add the task to the priority queue.
 max - iterate over all the queue and return the max value of priority,this func get a call when we add/remove a task from the queue.
+gracefullyterminate - finish the executer while not recive new task and end all the previus task.
+
+## Part 2 - Tests 
+we use the tests that we recieve at the assigment and add tests to test the gracefullyterminate func and the max priority func
