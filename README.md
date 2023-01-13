@@ -16,10 +16,22 @@ Lets have a look on the UML diagram we've created for this project.
  
  We will compare 3 scenarios with different amount of txt files we've created.
 
-n = 3000, seed = 15 , bound = 10000 </br>
-![test](https://user-images.githubusercontent.com/84707578/212276693-eff00907-a83c-4dcd-a861-8e0ca038459b.png)</br>
+
+!
 We assumed that fastest implementation would likely be using a thread pool. By using a thread pool, we can reuse a fixed number of threads, rather than creating a new thread for each task. This can greatly reduce the overhead of thread creation and management, leading to better performance. Additionally, using a thread pool allows you to control the number of threads running at any given time, which can help prevent overloading the system with too many threads.
 </br>
+1) n = 10, seed = 4 , bound = 10000
+![test1](https://user-images.githubusercontent.com/84707578/212296677-7e5b6a51-97f7-47e9-84dc-cbc42477aab5.png)
+
+2) n = 150, seed = 4 , bound = 10000
+![test2](https://user-images.githubusercontent.com/84707578/212297408-5cc7dd8a-c509-4205-9008-c2996b0fd86a.png)
+
+
+3) n = 3000, seed = 4 , bound = 10000
+![test3](https://user-images.githubusercontent.com/84707578/212276693-eff00907-a83c-4dcd-a861-8e0ca038459b.png)
+
+We can clearly see that using threads is the fastes way and has the best performance. On the first 2 tests using thread pool was faster then using single thread but in the last example we can see that single thread is faster than threadpool.
+
 There could be several reasons why using threads was the fastest implementation:</br>
 
 * The number of tasks you were performing was not large enough to justify the use of a thread pool. In cases where there are only a few tasks, using a    thread pool can actually add unnecessary overhead and slow down performance. 
