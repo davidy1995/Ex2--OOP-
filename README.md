@@ -40,11 +40,11 @@ There could be several reasons why using threads was the fastest implementation:
 
 
  ## Part I - How To Use:
-In order to run / test the program navigate to Driver class and change the N
+In order to run / test the program navigate to Driver class and change the value of n.
 
 ```bash
  String[] files = Ex2_1.createTextFiles(CHANGE THIS, 1, 10000);
 ```
 
-
+Please do not remove files folder which initialized with 1 txt file (Off course you can add more)
 
